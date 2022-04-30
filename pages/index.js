@@ -26,7 +26,7 @@ export default function Home() {
         </p>
         <p>
           Jump to{' '}
-          <a href="/sign-in/form">NFT Platform</a>
+          <a href="/sign-in">NFT Platform</a>
         </p>
       </h3>
     </LandingScreen>

@@ -14,13 +14,13 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import styles from './form.module.css'
+import styles from './index.module.css'
 
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="/sign-in/form">
+      <Link color="inherit" href="/sign-in">
         Placeholder NFT Website Name
       </Link>{' '}
       {new Date().getFullYear()}
