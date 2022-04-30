@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router';
 
 import * as React from 'react';
 import Button from '@mui/material/Button';
@@ -9,6 +10,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -36,9 +38,12 @@ const theme = createTheme({
 });
 
 export default function SignIn() {
+  const router = useRouter();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    router.push('/dashboard')
     console.log({
       email: data.get('email'),
       password: data.get('password'),
@@ -49,10 +54,10 @@ export default function SignIn() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div component="main" className={styles.root}>
-        <div className={styles['sign-in-sheet']}>
-          <Box>
+        <Paper className={styles['sign-in-sheet']}>
+          <Box className={styles.welcome}>
             <Typography component="h1" variant="h4">
-              Welcome to Placeholder NFT Website
+              Placeholder Logo
             </Typography>
             <Image
               priority
@@ -112,7 +117,7 @@ export default function SignIn() {
             </Grid>
           </Box>
           <Copyright sx={{ mt: 8, mb: 4 }} />
-        </div>
+        </Paper>
       </div>
     </ThemeProvider>
   );

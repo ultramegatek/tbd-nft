@@ -1,16 +1,18 @@
 .root {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
 .sign-in-sheet {
   align-items: 'center';
   background-color: white;
-  border-radius: 30px;
   display: 'flex';
   flex-direction: 'column';
   width: 40%;
-  margin: 2rem auto 0;
+  margin: 2rem auto;
   padding: 2rem;
+}
+
+.welcome {
   text-align: center;
 }
